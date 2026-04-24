@@ -3,138 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="Contagem regressiva para 2027 - Sistema de múltiplos eventos com tema de perícia criminal">
-    <title>Perícia Criminal | Sistema de Contagem 2027</title>
+    <meta name="description" content="Contagem regressiva para 2027 - Sistema investigativo com pistas">
+    <title>Perícia Criminal | Operação 2027 - Modo Investigação</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <!-- Cabeçalho com selo pericial -->
         <div class="crime-header">
-            <div class="badge">🔍 INSTITUTO DE PERÍCIA CRIMINAL 🔍</div>
-            <h1>OPERAÇÃO: CRONOS 2027</h1>
-            <div class="sub">SISTEMA DE CONTAGEM REGRESSIVA MULTI-EVENTOS • TEMPO REAL</div>
+            <div class="badge">🔍 CASO CONFIDENCIAL • NÍVEL 5 🔍</div>
+            <h1>OPERAÇÃO: FUTURO 2027</h1>
+            <div class="sub">MANUSCRITO INVESTIGATIVO • SIGA AS PISTAS</div>
         </div>
 
-        <!-- Grid de eventos - cada um com sua própria contagem -->
+        <!-- AVISO INICIAL -->
+        <div class="warning-banner">
+            ⚠️ ESTE DOCUMENTO CONTÉM EVIDÊNCIAS CLASSIFICADAS ⚠️
+        </div>
+
+        <!-- Grid de eventos com pistas -->
         <div class="events-grid">
             
-            <!-- EVENTO 1 -->
-            <div class="event-card">
+            <!-- PISTA 1 -->
+            <div class="event-card" data-pista-id="1">
                 <div class="event-icon">🔬</div>
-                <h3 class="event-title">ANÁLISE FORENSE 001</h3>
-                <div class="event-subtitle">Relatório de Investigação Temporal</div>
+                <h3 class="event-title">EVIDÊNCIA #001</h3>
+                <div class="event-subtitle">Luvas de látex encontradas na cena</div>
                 <div class="countdown-display">
-                    <div class="time-block">
-                        <span class="time-number" id="event1-days">0</span>
-                        <span class="time-label">dias</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time-number" id="event1-hours">0</span>
-                        <span class="time-label">horas</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time-number" id="event1-minutes">0</span>
-                        <span class="time-label">min</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time-number" id="event1-seconds">0</span>
-                        <span class="time-label">seg</span>
-                    </div>
+                    <div class="time-block"><span class="time-number" id="event1-days">0</span><span class="time-label">dias</span></div>
+                    <div class="time-block"><span class="time-number" id="event1-hours">0</span><span class="time-label">horas</span></div>
+                    <div class="time-block"><span class="time-number" id="event1-minutes">0</span><span class="time-label">min</span></div>
+                    <div class="time-block"><span class="time-number" id="event1-seconds">0</span><span class="time-label">seg</span></div>
+                </div>
+                <div class="clue-box" id="clue1">
+                    <div class="clue-icon">🕵️‍♂️ PISTA</div>
+                    <div class="clue-text">O primeiro número encontrado no local foi <strong class="highlight">24</strong>. Anote.</div>
                 </div>
                 <div class="evidence-tag">🔍 EVIDÊNCIA COLETADA</div>
             </div>
 
-            <!-- EVENTO 2 -->
-            <div class="event-card">
-                <div class="event-icon">🕵️</div>
-                <h3 class="event-title">PROTOCOLO DE SEGURANÇA</h3>
-                <div class="event-subtitle">Verificação de Integridade Temporal</div>
+            <!-- PISTA 2 -->
+            <div class="event-card" data-pista-id="2">
+                <div class="event-icon">📸</div>
+                <h3 class="event-title">EVIDÊNCIA #002</h3>
+                <div class="event-subtitle">Foto parcial de uma placa</div>
                 <div class="countdown-display">
-                    <div class="time-block">
-                        <span class="time-number" id="event2-days">0</span>
-                        <span class="time-label">dias</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time-number" id="event2-hours">0</span>
-                        <span class="time-label">horas</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time-number" id="event2-minutes">0</span>
-                        <span class="time-label">min</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time-number" id="event2-seconds">0</span>
-                        <span class="time-label">seg</span>
-                    </div>
+                    <div class="time-block"><span class="time-number" id="event2-days">0</span><span class="time-label">dias</span></div>
+                    <div class="time-block"><span class="time-number" id="event2-hours">0</span><span class="time-label">horas</span></div>
+                    <div class="time-block"><span class="time-number" id="event2-minutes">0</span><span class="time-label">min</span></div>
+                    <div class="time-block"><span class="time-number" id="event2-seconds">0</span><span class="time-label">seg</span></div>
                 </div>
-                <div class="evidence-tag">🔍 LAUDO EMITIDO</div>
+                <div class="clue-box" id="clue2">
+                    <div class="clue-icon">🕵️‍♂️ PISTA</div>
+                    <div class="clue-text">O segundo dígito da coordenada é <strong class="highlight">07</strong>. Anote.</div>
+                </div>
+                <div class="evidence-tag">🔍 EVIDÊNCIA COLETADA</div>
             </div>
 
-            <!-- EVENTO 3 -->
-            <div class="event-card">
-                <div class="event-icon">⚖️</div>
-                <h3 class="event-title">CÁLCULO PERICIAL</h3>
-                <div class="event-subtitle">Análise Estatística Criminal</div>
+            <!-- PISTA 3 -->
+            <div class="event-card" data-pista-id="3">
+                <div class="event-icon">📝</div>
+                <h3 class="event-title">EVIDÊNCIA #003</h3>
+                <div class="event-subtitle">Manuscrito rasgado</div>
                 <div class="countdown-display">
-                    <div class="time-block">
-                        <span class="time-number" id="event3-days">0</span>
-                        <span class="time-label">dias</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time-number" id="event3-hours">0</span>
-                        <span class="time-label">horas</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time-number" id="event3-minutes">0</span>
-                        <span class="time-label">min</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time-number" id="event3-seconds">0</span>
-                        <span class="time-label">seg</span>
-                    </div>
+                    <div class="time-block"><span class="time-number" id="event3-days">0</span><span class="time-label">dias</span></div>
+                    <div class="time-block"><span class="time-number" id="event3-hours">0</span><span class="time-label">horas</span></div>
+                    <div class="time-block"><span class="time-number" id="event3-minutes">0</span><span class="time-label">min</span></div>
+                    <div class="time-block"><span class="time-number" id="event3-seconds">0</span><span class="time-label">seg</span></div>
                 </div>
-                <div class="evidence-tag">🔍 MATERIAL COLETADO</div>
+                <div class="clue-box" id="clue3">
+                    <div class="clue-icon">🕵️‍♂️ PISTA</div>
+                    <div class="clue-text">A terceira evidência aponta para o número <strong class="highlight">12</strong>. Anote.</div>
+                </div>
+                <div class="evidence-tag">🔍 EVIDÊNCIA COLETADA</div>
             </div>
 
-            <!-- EVENTO 4 -->
-            <div class="event-card">
-                <div class="event-icon">📜</div>
-                <h3 class="event-title">DOCUMENTAÇÃO OFICIAL</h3>
-                <div class="event-subtitle">Registro de Evidências Temporais</div>
+            <!-- PISTA 4 -->
+            <div class="event-card" data-pista-id="4">
+                <div class="event-icon">💻</div>
+                <h3 class="event-title">EVIDÊNCIA #004</h3>
+                <div class="event-subtitle">Arquivo criptografado</div>
                 <div class="countdown-display">
-                    <div class="time-block">
-                        <span class="time-number" id="event4-days">0</span>
-                        <span class="time-label">dias</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time-number" id="event4-hours">0</span>
-                        <span class="time-label">horas</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time-number" id="event4-minutes">0</span>
-                        <span class="time-label">min</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time-number" id="event4-seconds">0</span>
-                        <span class="time-label">seg</span>
-                    </div>
+                    <div class="time-block"><span class="time-number" id="event4-days">0</span><span class="time-label">dias</span></div>
+                    <div class="time-block"><span class="time-number" id="event4-hours">0</span><span class="time-label">horas</span></div>
+                    <div class="time-block"><span class="time-number" id="event4-minutes">0</span><span class="time-label">min</span></div>
+                    <div class="time-block"><span class="time-number" id="event4-seconds">0</span><span class="time-label">seg</span></div>
                 </div>
-                <div class="evidence-tag">🔍 ARQUIVADO COMO PROVA</div>
+                <div class="clue-box" id="clue4">
+                    <div class="clue-icon">🕵️‍♂️ PISTA</div>
+                    <div class="clue-text">A última peça do quebra-cabeça: <strong class="highlight">2027</strong>. Combine.</div>
+                </div>
+                <div class="evidence-tag">🔍 EVIDÊNCIA COLETADA</div>
             </div>
         </div>
 
-        <!-- Rodapé com status -->
+        <!-- PAINEL DO DETETIVE - Revela a mensagem -->
+        <div class="detective-panel" id="detectivePanel">
+            <div class="panel-header">
+                <span>📋 CADERNO DE INVESTIGAÇÃO</span>
+                <button id="revealBtn" class="reveal-btn">🔓 REVELAR MENSAGEM</button>
+            </div>
+            <div class="panel-notes" id="panelNotes">
+                <div class="note-placeholder">Colete as 4 pistas e clique em "REVELAR MENSAGEM"...</div>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
         <div class="footer-status">
-            <div class="status-line">
-                <span class="status-dot"></span>
-                <span class="status-text">SISTEMA OPERACIONAL • CONTAGEM EM TEMPO REAL</span>
+            <div class="status-line"><span class="status-dot"></span><span class="status-text">MODO INVESTIGAÇÃO ATIVO</span></div>
+            <div class="target-info">🎯 SOLUÇÃO: 2027 - O ANO DA TRANFORMAÇÃO</div>
+            <div class="copyright">PERÍCIA CRIMINAL DIGITAL • OPERAÇÃO FUTURO • <span id="anoAtual"></span></div>
+        </div>
+    </div>
+
+    <!-- MODAL DE SUCESSO (quando resolver o caso) -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-badge">🏆 CASO RESOLVIDO 🏆</span>
+                <span class="modal-close">&times;</span>
             </div>
-            <div class="target-info">
-                🎯 ALVO CENTRAL: 01/01/2027 - 00:00:00
-            </div>
-            <div class="copyright">
-                PERÍCIA CRIMINAL DIGITAL • v4.0 • <span id="anoAtual"></span>
+            <div class="modal-body">
+                <div class="modal-icon">🔓</div>
+                <h2>MENSAGEM SECRETA REVELADA</h2>
+                <div class="secret-message" id="secretMessage">
+                    "QUEM INVESTIGA O FUTURO, DESCOBRE QUE 2027 SERÁ O ANO DA INOVAÇÃO E JUSTIÇA"
+                </div>
+                <div class="modal-footer-note">
+                    🔍 Parabéns, detetive! Você concluiu a Operação Futuro 2027.
+                </div>
             </div>
         </div>
     </div>
