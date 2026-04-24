@@ -1,29 +1,29 @@
-// Contagem regressiva para 2026 - Perícia Criminal
+// Contagem regressiva para 2027 - Perícia Criminal
 // Atualização em tempo real
 
 // Função principal que calcula e atualiza a contagem
 function atualizarContagem() {
-    // Data alvo: 1º de janeiro de 2026 às 00:00:00
-    const dataAlvo = new Date(2026, 0, 1, 0, 0, 0);
+    // Data alvo: 1º de janeiro de 2027 às 00:00:00
+    const dataAlvo = new Date(2027, 0, 1, 0, 0, 0);
     const agora = new Date();
     
     // Calcula a diferença em milissegundos
     let diferenca = dataAlvo - agora;
     
-    // Se a data já passou, mostrar zeros
+    // Se a data já passou, mostrar zeros e mensagem
     if (diferenca < 0) {
         document.getElementById('days').textContent = '00';
         document.getElementById('hours').textContent = '00';
         document.getElementById('minutes').textContent = '00';
         document.getElementById('seconds').textContent = '00';
         
-        // Adicionar mensagem de evento concluído
+        // Adicionar mensagem de evento concluído se ainda não existir
         const relatorio = document.querySelector('.relatorio');
         if (relatorio && !document.querySelector('.evento-finalizado')) {
             const msgFinal = document.createElement('div');
             msgFinal.className = 'evento-finalizado';
             msgFinal.style.cssText = 'color: #d66; font-weight: bold; margin-top: 10px; text-align: center;';
-            msgFinal.innerHTML = '🎯 OPERAÇÃO CONCLUÍDA • ANO 2026 INICIADO 🎯';
+            msgFinal.innerHTML = '🎯 OPERAÇÃO CONCLUÍDA • ANO 2027 INICIADO 🎯';
             relatorio.parentNode.insertBefore(msgFinal, relatorio.nextSibling);
         }
         return;
@@ -81,7 +81,6 @@ function adicionarEfeitoDigital() {
     if (titulo && !titulo.hasAttribute('data-animado')) {
         titulo.setAttribute('data-animado', 'true');
         // Pequeno efeito de digitação sutil
-        const textoOriginal = titulo.textContent;
         titulo.style.opacity = '0';
         setTimeout(() => {
             titulo.style.transition = 'opacity 0.8s';
@@ -93,8 +92,9 @@ function adicionarEfeitoDigital() {
 // Função para registrar logs de investigação (console)
 function logInvestigacao() {
     console.log('%c🔍 PERÍCIA CRIMINAL ATIVADA', 'color: #b44; font-size: 14px; font-weight: bold;');
-    console.log('%cSistema de contagem regressiva para 2026 em tempo real', 'color: #b68b8b; font-size: 12px;');
+    console.log('%cSistema de contagem regressiva para 2027 em tempo real', 'color: #b68b8b; font-size: 12px;');
     console.log('%cProtocolo de segurança ativo • Modo investigação', 'color: #b68b8b; font-size: 12px;');
+    console.log('%cData alvo: 01/01/2027 00:00:00', 'color: #b68b8b; font-size: 11px;');
 }
 
 // Inicialização completa quando a página carregar
