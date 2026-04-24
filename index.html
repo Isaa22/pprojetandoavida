@@ -3,109 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="Contagem regressiva para 2027 com tema de perícia criminal - Painel interativo">
-    <title>Perícia Criminal | Contagem Regressiva 2027</title>
+    <meta name="description" content="Contagem regressiva para 2027 - Sistema de múltiplos eventos com tema de perícia criminal">
+    <title>Perícia Criminal | Sistema de Contagem 2027</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <!-- Cabeçalho com selo pericial -->
         <div class="crime-header">
-            <div class="badge">🔍 EVIDÊNCIA OFICIAL 🔍</div>
+            <div class="badge">🔍 INSTITUTO DE PERÍCIA CRIMINAL 🔍</div>
             <h1>OPERAÇÃO: CRONOS 2027</h1>
-            <div class="sub">RELATÓRIO DE CONTAGEM REGRESSIVA • TEMPO REAL</div>
+            <div class="sub">SISTEMA DE CONTAGEM REGRESSIVA MULTI-EVENTOS • TEMPO REAL</div>
         </div>
 
-        <!-- Grid de contadores (clicáveis) -->
-        <div class="countdown-grid">
-            <!-- Dias -->
-            <div class="card-evidence" data-tipo="dias" data-unidade="DIAS" data-max="365">
-                <div class="fingerprint-icon">🕵️‍♂️</div>
-                <h3>PROTOCOLO: D-365</h3>
-                <div class="case-desc">ANÁLISE TEMPORAL</div>
-                <div class="time-number" id="days">00</div>
-                <div class="time-label">DIAS RESTANTES</div>
-                <div class="click-hint">🔍 CLIQUE PARA INVESTIGAR</div>
-            </div>
-
-            <!-- Horas -->
-            <div class="card-evidence" data-tipo="horas" data-unidade="HORAS" data-max="24">
-                <div class="fingerprint-icon">⏰</div>
-                <h3>PROTOCOLO: H-24</h3>
-                <div class="case-desc">CICLO HORÁRIO</div>
-                <div class="time-number" id="hours">00</div>
-                <div class="time-label">HORAS</div>
-                <div class="click-hint">🔍 CLIQUE PARA INVESTIGAR</div>
-            </div>
-
-            <!-- Minutos -->
-            <div class="card-evidence" data-tipo="minutos" data-unidade="MINUTOS" data-max="60">
-                <div class="fingerprint-icon">⏱️</div>
-                <h3>PROTOCOLO: M-60</h3>
-                <div class="case-desc">UNIDADES MINUTAIS</div>
-                <div class="time-number" id="minutes">00</div>
-                <div class="time-label">MINUTOS</div>
-                <div class="click-hint">🔍 CLIQUE PARA INVESTIGAR</div>
-            </div>
-
-            <!-- Segundos -->
-            <div class="card-evidence" data-tipo="segundos" data-unidade="SEGUNDOS" data-max="60">
-                <div class="fingerprint-icon">⚡</div>
-                <h3>PROTOCOLO: S-60</h3>
-                <div class="case-desc">FRAGMENTOS SEGUNDÁRIOS</div>
-                <div class="time-number" id="seconds">00</div>
-                <div class="time-label">SEGUNDOS</div>
-                <div class="click-hint">🔍 CLIQUE PARA INVESTIGAR</div>
-            </div>
-        </div>
-
-        <!-- Relatório de status e investigação -->
-        <div class="relatorio">
-            <div class="status">
-                🔬 <span>STATUS OPERACIONAL:</span> CONTAGEM ATIVA • TEMPO REAL
-            </div>
-            <div class="deadline">
-                🎯 ALVO: 01/01/2027 - 00:00:00
-            </div>
-        </div>
-        
-        <div class="assinatura">
-            PERÍCIA CRIMINAL DIGITAL • SISTEMA DE CONTAGEM REGRESSIVA v3.0 • <span id="anoAtual"></span>
-        </div>
-    </div>
-
-    <!-- MODAL PARA DETALHES (tela que aparece ao clicar) -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-badge">🔬 LAUDO PERICIAL 🔬</div>
-                <span class="modal-close">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="modal-icon" id="modalIcon">🕵️‍♂️</div>
-                <h2 id="modalTitle">PROTOCOLO: D-365</h2>
-                <div class="modal-crime-detail">
-                    <div class="detail-card">
-                        <span class="detail-label">📊 ESTATÍSTICA ATUAL</span>
-                        <span class="detail-value" id="modalValorAtual">0</span>
-                        <span class="detail-unit" id="modalUnidade">DIAS</span>
+        <!-- Grid de eventos - cada um com sua própria contagem -->
+        <div class="events-grid">
+            
+            <!-- EVENTO 1 -->
+            <div class="event-card">
+                <div class="event-icon">🔬</div>
+                <h3 class="event-title">ANÁLISE FORENSE 001</h3>
+                <div class="event-subtitle">Relatório de Investigação Temporal</div>
+                <div class="countdown-display">
+                    <div class="time-block">
+                        <span class="time-number" id="event1-days">0</span>
+                        <span class="time-label">dias</span>
                     </div>
-                    <div class="detail-card">
-                        <span class="detail-label">📈 PORCENTAGEM RESTANTE</span>
-                        <div class="progress-container">
-                            <div class="progress-bar" id="progressBar"></div>
-                        </div>
-                        <span class="detail-value" id="modalPorcentagem">0%</span>
+                    <div class="time-block">
+                        <span class="time-number" id="event1-hours">0</span>
+                        <span class="time-label">horas</span>
                     </div>
-                    <div class="detail-card">
-                        <span class="detail-label">⏱️ TEMPO DECORRIDO DESDE O INÍCIO</span>
-                        <span class="detail-value" id="modalDecorrido">0</span>
-                        <span class="detail-unit" id="modalDecorridoUnidade">DIAS</span>
+                    <div class="time-block">
+                        <span class="time-number" id="event1-minutes">0</span>
+                        <span class="time-label">min</span>
+                    </div>
+                    <div class="time-block">
+                        <span class="time-number" id="event1-seconds">0</span>
+                        <span class="time-label">seg</span>
                     </div>
                 </div>
-                <div class="modal-footer-note">
-                    <span>🔍 Análise forense em tempo real • Dados sincronizados com o relógio oficial</span>
+                <div class="evidence-tag">🔍 EVIDÊNCIA COLETADA</div>
+            </div>
+
+            <!-- EVENTO 2 -->
+            <div class="event-card">
+                <div class="event-icon">🕵️</div>
+                <h3 class="event-title">PROTOCOLO DE SEGURANÇA</h3>
+                <div class="event-subtitle">Verificação de Integridade Temporal</div>
+                <div class="countdown-display">
+                    <div class="time-block">
+                        <span class="time-number" id="event2-days">0</span>
+                        <span class="time-label">dias</span>
+                    </div>
+                    <div class="time-block">
+                        <span class="time-number" id="event2-hours">0</span>
+                        <span class="time-label">horas</span>
+                    </div>
+                    <div class="time-block">
+                        <span class="time-number" id="event2-minutes">0</span>
+                        <span class="time-label">min</span>
+                    </div>
+                    <div class="time-block">
+                        <span class="time-number" id="event2-seconds">0</span>
+                        <span class="time-label">seg</span>
+                    </div>
                 </div>
+                <div class="evidence-tag">🔍 LAUDO EMITIDO</div>
+            </div>
+
+            <!-- EVENTO 3 -->
+            <div class="event-card">
+                <div class="event-icon">⚖️</div>
+                <h3 class="event-title">CÁLCULO PERICIAL</h3>
+                <div class="event-subtitle">Análise Estatística Criminal</div>
+                <div class="countdown-display">
+                    <div class="time-block">
+                        <span class="time-number" id="event3-days">0</span>
+                        <span class="time-label">dias</span>
+                    </div>
+                    <div class="time-block">
+                        <span class="time-number" id="event3-hours">0</span>
+                        <span class="time-label">horas</span>
+                    </div>
+                    <div class="time-block">
+                        <span class="time-number" id="event3-minutes">0</span>
+                        <span class="time-label">min</span>
+                    </div>
+                    <div class="time-block">
+                        <span class="time-number" id="event3-seconds">0</span>
+                        <span class="time-label">seg</span>
+                    </div>
+                </div>
+                <div class="evidence-tag">🔍 MATERIAL COLETADO</div>
+            </div>
+
+            <!-- EVENTO 4 -->
+            <div class="event-card">
+                <div class="event-icon">📜</div>
+                <h3 class="event-title">DOCUMENTAÇÃO OFICIAL</h3>
+                <div class="event-subtitle">Registro de Evidências Temporais</div>
+                <div class="countdown-display">
+                    <div class="time-block">
+                        <span class="time-number" id="event4-days">0</span>
+                        <span class="time-label">dias</span>
+                    </div>
+                    <div class="time-block">
+                        <span class="time-number" id="event4-hours">0</span>
+                        <span class="time-label">horas</span>
+                    </div>
+                    <div class="time-block">
+                        <span class="time-number" id="event4-minutes">0</span>
+                        <span class="time-label">min</span>
+                    </div>
+                    <div class="time-block">
+                        <span class="time-number" id="event4-seconds">0</span>
+                        <span class="time-label">seg</span>
+                    </div>
+                </div>
+                <div class="evidence-tag">🔍 ARQUIVADO COMO PROVA</div>
+            </div>
+        </div>
+
+        <!-- Rodapé com status -->
+        <div class="footer-status">
+            <div class="status-line">
+                <span class="status-dot"></span>
+                <span class="status-text">SISTEMA OPERACIONAL • CONTAGEM EM TEMPO REAL</span>
+            </div>
+            <div class="target-info">
+                🎯 ALVO CENTRAL: 01/01/2027 - 00:00:00
+            </div>
+            <div class="copyright">
+                PERÍCIA CRIMINAL DIGITAL • v4.0 • <span id="anoAtual"></span>
             </div>
         </div>
     </div>
