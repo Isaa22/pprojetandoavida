@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="Contagem regressiva para 2027 com tema de perícia criminal">
+    <meta name="description" content="Contagem regressiva para 2027 com tema de perícia criminal - Painel interativo">
     <title>Perícia Criminal | Contagem Regressiva 2027</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,42 +16,46 @@
             <div class="sub">RELATÓRIO DE CONTAGEM REGRESSIVA • TEMPO REAL</div>
         </div>
 
-        <!-- Grid de contadores -->
+        <!-- Grid de contadores (clicáveis) -->
         <div class="countdown-grid">
             <!-- Dias -->
-            <div class="card-evidence">
+            <div class="card-evidence" data-tipo="dias" data-unidade="DIAS" data-max="365">
                 <div class="fingerprint-icon">🕵️‍♂️</div>
                 <h3>PROTOCOLO: D-365</h3>
                 <div class="case-desc">ANÁLISE TEMPORAL</div>
                 <div class="time-number" id="days">00</div>
                 <div class="time-label">DIAS RESTANTES</div>
+                <div class="click-hint">🔍 CLIQUE PARA INVESTIGAR</div>
             </div>
 
             <!-- Horas -->
-            <div class="card-evidence">
+            <div class="card-evidence" data-tipo="horas" data-unidade="HORAS" data-max="24">
                 <div class="fingerprint-icon">⏰</div>
                 <h3>PROTOCOLO: H-24</h3>
                 <div class="case-desc">CICLO HORÁRIO</div>
                 <div class="time-number" id="hours">00</div>
                 <div class="time-label">HORAS</div>
+                <div class="click-hint">🔍 CLIQUE PARA INVESTIGAR</div>
             </div>
 
             <!-- Minutos -->
-            <div class="card-evidence">
+            <div class="card-evidence" data-tipo="minutos" data-unidade="MINUTOS" data-max="60">
                 <div class="fingerprint-icon">⏱️</div>
                 <h3>PROTOCOLO: M-60</h3>
                 <div class="case-desc">UNIDADES MINUTAIS</div>
                 <div class="time-number" id="minutes">00</div>
                 <div class="time-label">MINUTOS</div>
+                <div class="click-hint">🔍 CLIQUE PARA INVESTIGAR</div>
             </div>
 
             <!-- Segundos -->
-            <div class="card-evidence">
+            <div class="card-evidence" data-tipo="segundos" data-unidade="SEGUNDOS" data-max="60">
                 <div class="fingerprint-icon">⚡</div>
                 <h3>PROTOCOLO: S-60</h3>
                 <div class="case-desc">FRAGMENTOS SEGUNDÁRIOS</div>
                 <div class="time-number" id="seconds">00</div>
                 <div class="time-label">SEGUNDOS</div>
+                <div class="click-hint">🔍 CLIQUE PARA INVESTIGAR</div>
             </div>
         </div>
 
@@ -66,7 +70,43 @@
         </div>
         
         <div class="assinatura">
-            PERÍCIA CRIMINAL DIGITAL • SISTEMA DE CONTAGEM REGRESSIVA v2.0 • <span id="anoAtual"></span>
+            PERÍCIA CRIMINAL DIGITAL • SISTEMA DE CONTAGEM REGRESSIVA v3.0 • <span id="anoAtual"></span>
+        </div>
+    </div>
+
+    <!-- MODAL PARA DETALHES (tela que aparece ao clicar) -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-badge">🔬 LAUDO PERICIAL 🔬</div>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-icon" id="modalIcon">🕵️‍♂️</div>
+                <h2 id="modalTitle">PROTOCOLO: D-365</h2>
+                <div class="modal-crime-detail">
+                    <div class="detail-card">
+                        <span class="detail-label">📊 ESTATÍSTICA ATUAL</span>
+                        <span class="detail-value" id="modalValorAtual">0</span>
+                        <span class="detail-unit" id="modalUnidade">DIAS</span>
+                    </div>
+                    <div class="detail-card">
+                        <span class="detail-label">📈 PORCENTAGEM RESTANTE</span>
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progressBar"></div>
+                        </div>
+                        <span class="detail-value" id="modalPorcentagem">0%</span>
+                    </div>
+                    <div class="detail-card">
+                        <span class="detail-label">⏱️ TEMPO DECORRIDO DESDE O INÍCIO</span>
+                        <span class="detail-value" id="modalDecorrido">0</span>
+                        <span class="detail-unit" id="modalDecorridoUnidade">DIAS</span>
+                    </div>
+                </div>
+                <div class="modal-footer-note">
+                    <span>🔍 Análise forense em tempo real • Dados sincronizados com o relógio oficial</span>
+                </div>
+            </div>
         </div>
     </div>
 
