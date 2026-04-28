@@ -1,139 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="Contagem regressiva para 2027 - Sistema investigativo com pistas">
-    <title>Perícia Criminal | Operação 2027 - Modo Investigação</title>
+    <title>Operação: Perícia Criminal</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!-- Cabeçalho com selo pericial -->
-        <div class="crime-header">
-            <div class="badge">🔍 CASO CONFIDENCIAL • NÍVEL 5 🔍</div>
-            <h1>OPERAÇÃO: FUTURO 2027</h1>
-            <div class="sub">MANUSCRITO INVESTIGATIVO • SIGA AS PISTAS</div>
+        <div class="top-seal">
+            <span>🔒 ACESSO RESTRITO • NÍVEL DE PERÍCIA 5 🔒</span>
         </div>
 
-        <!-- AVISO INICIAL -->
-        <div class="warning-banner">
-            ⚠️ ESTE DOCUMENTO CONTÉM EVIDÊNCIAS CLASSIFICADAS ⚠️
-        </div>
+        <header>
+            <h1 class="main-title">🕵️‍♂️ OPERAÇÃO: <span>VESTÍGIOS OCULTOS</span> 🧬</h1>
+            <p class="subhead">LAUDO PERICIAL • SIGA AS EVIDÊNCIAS • CASO 2027</p>
+        </header>
 
-        <!-- Grid de eventos com pistas -->
-        <div class="events-grid">
-            
-            <!-- PISTA 1 -->
-            <div class="event-card" data-pista-id="1">
-                <div class="event-icon">🔬</div>
-                <h3 class="event-title">EVIDÊNCIA #001</h3>
-                <div class="event-subtitle">Luvas de látex encontradas na cena</div>
-                <div class="countdown-display">
-                    <div class="time-block"><span class="time-number" id="event1-days">0</span><span class="time-label">dias</span></div>
-                    <div class="time-block"><span class="time-number" id="event1-hours">0</span><span class="time-label">horas</span></div>
-                    <div class="time-block"><span class="time-number" id="event1-minutes">0</span><span class="time-label">min</span></div>
-                    <div class="time-block"><span class="time-number" id="event1-seconds">0</span><span class="time-label">seg</span></div>
-                </div>
-                <div class="clue-box" id="clue1">
-                    <div class="clue-icon">🕵️‍♂️ PISTA</div>
-                    <div class="clue-text">O primeiro número encontrado no local foi <strong class="highlight">24</strong>. Anote.</div>
-                </div>
-                <div class="evidence-tag">🔍 EVIDÊNCIA COLETADA</div>
+        <!-- GRADE DE EVIDÊNCIAS (4 CARTAS) -->
+        <div class="evidence-grid">
+            <!-- EVIDÊNCIA 1 - Luvas de látex -->
+            <div class="card" data-id="0">
+                <div class="card-icon">🧤</div>
+                <h3>EVIDÊNCIA #001</h3>
+                <p class="desc">Luvas de látex com vestígios de sangue</p>
+                <div class="timer" id="timer0">00d 00h 00m 00s</div>
+                <button class="btn-evidence" data-pista="24">🔍 COLETAR VESTÍGIO</button>
+                <div class="collected-badge" id="collected0">📌 VESTÍGIO COLETADO</div>
             </div>
 
-            <!-- PISTA 2 -->
-            <div class="event-card" data-pista-id="2">
-                <div class="event-icon">📸</div>
-                <h3 class="event-title">EVIDÊNCIA #002</h3>
-                <div class="event-subtitle">Foto parcial de uma placa</div>
-                <div class="countdown-display">
-                    <div class="time-block"><span class="time-number" id="event2-days">0</span><span class="time-label">dias</span></div>
-                    <div class="time-block"><span class="time-number" id="event2-hours">0</span><span class="time-label">horas</span></div>
-                    <div class="time-block"><span class="time-number" id="event2-minutes">0</span><span class="time-label">min</span></div>
-                    <div class="time-block"><span class="time-number" id="event2-seconds">0</span><span class="time-label">seg</span></div>
-                </div>
-                <div class="clue-box" id="clue2">
-                    <div class="clue-icon">🕵️‍♂️ PISTA</div>
-                    <div class="clue-text">O segundo dígito da coordenada é <strong class="highlight">07</strong>. Anote.</div>
-                </div>
-                <div class="evidence-tag">🔍 EVIDÊNCIA COLETADA</div>
+            <!-- EVIDÊNCIA 2 - Impressão digital -->
+            <div class="card" data-id="1">
+                <div class="card-icon">🖐️</div>
+                <h3>EVIDÊNCIA #002</h3>
+                <p class="desc">Impressão digital parcial em vidro quebrado</p>
+                <div class="timer" id="timer1">00d 00h 00m 00s</div>
+                <button class="btn-evidence" data-pista="07">🔍 COLETAR VESTÍGIO</button>
+                <div class="collected-badge" id="collected1">📌 VESTÍGIO COLETADO</div>
             </div>
 
-            <!-- PISTA 3 -->
-            <div class="event-card" data-pista-id="3">
-                <div class="event-icon">📝</div>
-                <h3 class="event-title">EVIDÊNCIA #003</h3>
-                <div class="event-subtitle">Manuscrito rasgado</div>
-                <div class="countdown-display">
-                    <div class="time-block"><span class="time-number" id="event3-days">0</span><span class="time-label">dias</span></div>
-                    <div class="time-block"><span class="time-number" id="event3-hours">0</span><span class="time-label">horas</span></div>
-                    <div class="time-block"><span class="time-number" id="event3-minutes">0</span><span class="time-label">min</span></div>
-                    <div class="time-block"><span class="time-number" id="event3-seconds">0</span><span class="time-label">seg</span></div>
-                </div>
-                <div class="clue-box" id="clue3">
-                    <div class="clue-icon">🕵️‍♂️ PISTA</div>
-                    <div class="clue-text">A terceira evidência aponta para o número <strong class="highlight">12</strong>. Anote.</div>
-                </div>
-                <div class="evidence-tag">🔍 EVIDÊNCIA COLETADA</div>
+            <!-- EVIDÊNCIA 3 - Manuscrito ameaçador -->
+            <div class="card" data-id="2">
+                <div class="card-icon">📜</div>
+                <h3>EVIDÊNCIA #003</h3>
+                <p class="desc">Manuscrito rasgado com código cifrado</p>
+                <div class="timer" id="timer2">00d 00h 00m 00s</div>
+                <button class="btn-evidence" data-pista="12">🔍 COLETAR VESTÍGIO</button>
+                <div class="collected-badge" id="collected2">📌 VESTÍGIO COLETADO</div>
             </div>
 
-            <!-- PISTA 4 -->
-            <div class="event-card" data-pista-id="4">
-                <div class="event-icon">💻</div>
-                <h3 class="event-title">EVIDÊNCIA #004</h3>
-                <div class="event-subtitle">Arquivo criptografado</div>
-                <div class="countdown-display">
-                    <div class="time-block"><span class="time-number" id="event4-days">0</span><span class="time-label">dias</span></div>
-                    <div class="time-block"><span class="time-number" id="event4-hours">0</span><span class="time-label">horas</span></div>
-                    <div class="time-block"><span class="time-number" id="event4-minutes">0</span><span class="time-label">min</span></div>
-                    <div class="time-block"><span class="time-number" id="event4-seconds">0</span><span class="time-label">seg</span></div>
-                </div>
-                <div class="clue-box" id="clue4">
-                    <div class="clue-icon">🕵️‍♂️ PISTA</div>
-                    <div class="clue-text">A última peça do quebra-cabeça: <strong class="highlight">2027</strong>. Combine.</div>
-                </div>
-                <div class="evidence-tag">🔍 EVIDÊNCIA COLETADA</div>
+            <!-- EVIDÊNCIA 4 - Arquivo criptografado -->
+            <div class="card" data-id="3">
+                <div class="card-icon">💾</div>
+                <h3>EVIDÊNCIA #004</h3>
+                <p class="desc">Arquivo criptografado encontrado no HD do suspeito</p>
+                <div class="timer" id="timer3">00d 00h 00m 00s</div>
+                <button class="btn-evidence" data-pista="2027">🔍 COLETAR VESTÍGIO</button>
+                <div class="collected-badge" id="collected3">📌 VESTÍGIO COLETADO</div>
             </div>
         </div>
 
-        <!-- PAINEL DO DETETIVE - Revela a mensagem -->
-        <div class="detective-panel" id="detectivePanel">
-            <div class="panel-header">
-                <span>📋 CADERNO DE INVESTIGAÇÃO</span>
-                <button id="revealBtn" class="reveal-btn">🔓 REVELAR MENSAGEM</button>
+        <!-- CADERNO DO INVESTIGADOR (COMBINAR PISTAS) -->
+        <div class="investigation-notebook">
+            <h2>📋 CADERNO DE PERÍCIA</h2>
+            <div class="clues-list" id="cluesList">
+                <span class="placeholder">Nenhum vestígio coletado. Aperte os botões acima, detetive.</span>
             </div>
-            <div class="panel-notes" id="panelNotes">
-                <div class="note-placeholder">Colete as 4 pistas e clique em "REVELAR MENSAGEM"...</div>
+            <div class="action-area">
+                <button id="revealBtn" class="btn-reveal">🔎 REVELAR RELATÓRIO FINAL</button>
             </div>
+            <div id="finalMessage" class="final-report"></div>
         </div>
 
-        <!-- Rodapé -->
-        <div class="footer-status">
-            <div class="status-line"><span class="status-dot"></span><span class="status-text">MODO INVESTIGAÇÃO ATIVO</span></div>
-            <div class="target-info">🎯 SOLUÇÃO: 2027 - O ANO DA TRANFORMAÇÃO</div>
-            <div class="copyright">PERÍCIA CRIMINAL DIGITAL • OPERAÇÃO FUTURO • <span id="anoAtual"></span></div>
-        </div>
-    </div>
-
-    <!-- MODAL DE SUCESSO (quando resolver o caso) -->
-    <div id="successModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="modal-badge">🏆 CASO RESOLVIDO 🏆</span>
-                <span class="modal-close">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="modal-icon">🔓</div>
-                <h2>MENSAGEM SECRETA REVELADA</h2>
-                <div class="secret-message" id="secretMessage">
-                    "QUEM INVESTIGA O FUTURO, DESCOBRE QUE 2027 SERÁ O ANO DA INOVAÇÃO E JUSTIÇA"
-                </div>
-                <div class="modal-footer-note">
-                    🔍 Parabéns, detetive! Você concluiu a Operação Futuro 2027.
-                </div>
-            </div>
-        </div>
+        <footer>
+            <p>© DEPARTAMENTO DE PERÍCIA CRIMINAL • TODAS AS EVIDÊNCIAS SÃO CONFIDENCIAIS</p>
+        </footer>
     </div>
 
     <script src="script.js"></script>
